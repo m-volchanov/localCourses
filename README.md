@@ -1,1 +1,1 @@
-# localCourses
+# AutodocCourses
