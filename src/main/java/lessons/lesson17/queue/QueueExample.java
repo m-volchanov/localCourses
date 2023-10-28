@@ -12,32 +12,36 @@ public class QueueExample {
         elementExample(myQueue);
     }
 
+    // вернет верхний элемент и в случае пустого листа выбрасывает Exception
     static void elementExample(Queue<Integer> queue) {
         System.out.println(queue.element());
         showQueue(queue);
     }
 
-    static void peakExample(Queue<Integer> queue) {
+    // вернет верхний элемент и в случае пустого листа НЕ выбрасывает Exception и вернет null
+    static void peekExample(Queue<Integer> queue) {
         System.out.println(queue.peek());
         showQueue(queue);
     }
 
-    static void offerExample(Queue<Integer> queue,int object) {
-        System.out.println("Before deleting with offer method");
+    static void offerExample(Queue<Integer> queue, int object) {
+        System.out.println("Before using offer method");
         showQueue(queue);
         queue.offer(object);
-        System.out.println('\n' + "After deleting with offer method");
+        System.out.println('\n' + "After using offer method");
         showQueue(queue);
     }
 
-    static void removeByObjectExample(Queue<Integer> queue,int object) {
+    // удаляет элемент по значению и в случае пустого листа выбрасывает Exception
+    static void removeByObjectExample(Queue<Integer> queue, int object) {
         System.out.println("Before deleting with remove method");
         showQueue(queue);
-        queue.remove(object);
+        queue.remove(34);
         System.out.println('\n' + "After deleting with remove method");
         showQueue(queue);
     }
 
+    // удаляет верхний элемент и в случае пустого листа выбрасывает Exception
     static void removeExample(Queue<Integer> queue) {
         System.out.println("Before deleting with remove method");
         showQueue(queue);
@@ -46,6 +50,7 @@ public class QueueExample {
         showQueue(queue);
     }
 
+    // удаляет верхний элемент и в случае пустого листа НЕ выбрасывает Exception
     static void pollExample(Queue<Integer> queue) {
         System.out.println("Before deleting with poll method");
         showQueue(queue);

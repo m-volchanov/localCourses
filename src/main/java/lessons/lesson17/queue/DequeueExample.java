@@ -2,10 +2,9 @@ package lessons.lesson17.queue;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
 
 public class DequeueExample {
+
     public static void main(String[] args) {
         Deque<Integer> queue = new LinkedList<>();
         queue.push(3);
