@@ -16,7 +16,7 @@ public class FirstTestExample {
 
     @BeforeMethod
     public void beforeMethod() {
-        System.out.println("this method will execute before test method");
+        System.out.println("this method will execute before each test method");
     }
 
     @Test(description = "this our first test", priority = 1, timeOut = 5, invocationCount = 5, invocationTimeOut = 20)
@@ -31,12 +31,12 @@ public class FirstTestExample {
     }
 
     @Test(expectedExceptions = {ArithmeticException.class})
-    public void testDevision() {
+    public void testDivision() {
         System.out.println(2 / 0);
     }
 
     @AfterMethod
     public void afterMethod() {
-        System.out.println("this method will execute after test method");
+        System.out.println("this method will execute after each test method");
     }
 }
