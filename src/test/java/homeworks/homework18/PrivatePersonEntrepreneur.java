@@ -1,4 +1,4 @@
-package homework18;
+package homeworks.homework18;
 
 public class PrivatePersonEntrepreneur extends Client {
     public PrivatePersonEntrepreneur(double balance) {

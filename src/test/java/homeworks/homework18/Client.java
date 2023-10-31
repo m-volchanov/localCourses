@@ -1,4 +1,4 @@
-package homework18;
+package homeworks.homework18;
 
 abstract class Client {
     protected double balance;
