@@ -1,4 +1,4 @@
-package homework18;
+package homeworks.homework18;
 
 public class LegalEntity extends Client {
     public LegalEntity(double balance) {
