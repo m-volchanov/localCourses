@@ -27,6 +27,7 @@ public class WebDriverInteraction {
 
         inputSearch.sendKeys("Some text");
         btnSearch.click();
+        inputSearch.clear();
 
         String colorBtn = btnSearch.getAttribute("color");
         String btnText = btnSearch.getText();

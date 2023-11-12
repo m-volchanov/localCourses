@@ -1,0 +1,11 @@
+CSS Locators
+логотип - img[alt='Rozetka Logo']
+кнопка Каталог - button#fat-menu
+кнопка микрофон(в инпуте поиск) - button.search-form__microphone
+кнопка корзины - button.header__button use[href="#icon-header-basket"]
+
+XPath locators
+логотип - //img[@alt='Rozetka Logo']
+кнопка Каталог - //button[@id='fat-menu']
+кнопка микрофон(в инпуте поиск) - //button[contains(@class, 'search-form__microphone')]
+кнопка корзины - (//button[contains(@class, 'header__button')])[3]
