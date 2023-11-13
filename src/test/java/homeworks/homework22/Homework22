@@ -1,11 +1,15 @@
-CSS Locators
-логотип - img[alt='Rozetka Logo']
-кнопка Каталог - button#fat-menu
-кнопка микрофон(в инпуте поиск) - button.search-form__microphone
-кнопка корзины - button.header__button use[href="#icon-header-basket"]
+// Локаторы для логотипа
+By logoByCss = By.cssSelector(“a.header__logo”);
+By logoByXpath = By.xpath(“//a[@class=‘header__logo’]“);
 
-XPath locators
-логотип - //img[@alt='Rozetka Logo']
-кнопка Каталог - //button[@id='fat-menu']
-кнопка микрофон(в инпуте поиск) - //button[contains(@class, 'search-form__microphone')]
-кнопка корзины - (//button[contains(@class, 'header__button')])[3]
+// Локаторы для каталога
+By catalogByCss = By.cssSelector(“#fat-menu”);
+By catalogByXpath = By.xpath(“//button[@id=‘fat-menu’]“);
+
+// Локатор для кнопки микрофона в инпуте поиска
+By searchMicrophoneByCss = By.cssSelector(“button.search-form__microphone”);
+By searchMicrophoneByXpath = By.xpath(“//button[contains(@class, ‘search-form__microphone’)]“);
+
+// Локатор для кнопки корзины
+By cartButtonByCss = By.cssSelector(“li.header-actions__item--cart button.header__button”);
+By cartButtonByXpath = By.xpath(“//rz-cart/button[@class=‘header__button ng-star-inserted’]“);
