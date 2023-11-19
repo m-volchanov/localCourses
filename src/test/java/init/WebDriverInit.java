@@ -3,6 +3,7 @@ package init;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -16,7 +17,13 @@ public class WebDriverInit {
     @BeforeTest
     public void initDriver() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-popup-blocking");
+        options.addArguments("--disable-infobars");
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
