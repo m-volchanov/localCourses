@@ -18,5 +18,6 @@ public class TestWithSubmit extends WebDriverInit {
         } else {
             Assert.fail();
         }
+
     }
 }
