@@ -1,9 +1,7 @@
 package lessons.lesson25;
 
-import init.WebDriverInit;
-import org.openqa.selenium.By;
+import pattern.pageObject.init.WebDriverInit;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
