@@ -1,6 +1,6 @@
 package homeworks.homework25;
 
-import pattern.pageObject.init.WebDriverInit;
+import pageObject.init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,7 +28,7 @@ public class homeworkOnAtdDe extends WebDriverInit {
         checkHandlingSituations(expectedHandlingSituationsText);
     }
 
-    private void handleCookiesNotification() {
+    public void handleCookiesNotification() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement cookiesNotification = wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.linkText("Alle Cookies erlauben")));
