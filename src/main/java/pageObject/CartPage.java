@@ -9,22 +9,22 @@ import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class CartPage extends WebDriverInit {
+public class CartPage {
+
+    public WebDriver driver;
     public CartPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public CartPage verifyCartItemCount(int expectedItemCount) throws InterruptedException {
+    public CartPage verifyCartItemCount(int expectedItemCount) {
         List<WebElement> cartItems = driver.findElements(
                 By.xpath("//rz-icon-badge/span[@class='badge badge--green ng-star-inserted']"));
-        Thread.sleep(5000);
         return this;
     }
 
-    public CartPage goToCartPage(int expectedItemCount) throws InterruptedException {
+    public CartPage goToCartPage(int expectedItemCount) {
         driver.findElement(
                 By.xpath("//button[@rzopencart and contains(@class, 'header__button--active')]")).click();
-        Thread.sleep(5000);
         return this;
     }
 

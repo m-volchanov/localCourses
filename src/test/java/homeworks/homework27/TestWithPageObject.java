@@ -9,7 +9,7 @@ public class TestWithPageObject extends WebDriverInit {
     final String EXPECTED_TITTLE = "Laptop Lenovo IdeaPad 5 Pro 14ACN6 (82L700F0PB) Storm Grey";
 
     @Test
-    public void testWithPageObject() throws InterruptedException {
+    public void testWithPageObject() {
         new MainPage(driver)
                 .openMainPage()
                 .handleCookies()

@@ -1,6 +1,5 @@
 package pageObject.init;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,7 +16,7 @@ public class WebDriverInit {
 
     @BeforeTest
     public void initDriver() {
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--disable-automation");
