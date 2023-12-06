@@ -25,11 +25,6 @@ public class MainPage {
         return this;
     }
 
-    public MainPage clearOfInputSearch() {
-        inputSearch.clear();
-        return this;
-    }
-
     public SearchPage clickBtnSearch() {
         btnSearch.click();
         return new SearchPage(driver);
