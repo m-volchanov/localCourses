@@ -1,6 +1,6 @@
 package homeworks.homework26;
 
-import pattern.pageObject.init.WebDriverInit;
+import pageObject.init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -29,7 +29,7 @@ public class HomeworkOnRozetkaPl extends WebDriverInit {
         checkActionLabel();
     }
 
-    private void handleCookiesNotification() {
+    public void handleCookiesNotification() {
         WebElement cookiesNotification = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//button[@class='button button_size_large button_color_green']")));
         if (cookiesNotification.isDisplayed()) {

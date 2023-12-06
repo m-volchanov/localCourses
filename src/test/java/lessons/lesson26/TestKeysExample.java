@@ -1,6 +1,6 @@
 package lessons.lesson26;
 
-import pattern.pageObject.init.WebDriverInit;
+import pageObject.init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
