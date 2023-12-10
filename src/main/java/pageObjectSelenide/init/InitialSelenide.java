@@ -1,4 +1,4 @@
-package pageObject.init;
+package pageObjectSelenide.init;
 
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.chrome.ChromeOptions;

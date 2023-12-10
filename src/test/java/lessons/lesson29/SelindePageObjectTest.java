@@ -1,7 +1,7 @@
 package lessons.lesson29;
 
 import org.testng.annotations.Test;
-import pageObject.init.InitialSelenide;
+import pageObjectSelenide.init.InitialSelenide;
 import pattern.pageObject.selenide.MainPageLogic;
 
 public class SelindePageObjectTest extends InitialSelenide {
