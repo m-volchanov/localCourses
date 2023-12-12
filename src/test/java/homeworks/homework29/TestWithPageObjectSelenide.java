@@ -11,8 +11,8 @@ public class TestWithPageObjectSelenide {
 
     @Test
     public void testWithPageObject() {
+        open("https://rozetka.pl/");
         new MainPageSelenide()
-                .openMainPage()
                 .handleCookies()
                 .goToLaptopsAndTabletsPage()
                 .goToLaptopsPage()
