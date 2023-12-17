@@ -1,9 +1,7 @@
 package homeworks.homework30;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Launcher {
     public static void main(String[] args) {
@@ -13,17 +11,10 @@ public class Launcher {
         personList.add(new Person("Charlie", 28));
         personList.add(new Person("David", 26));
 
-
-        List<Person> sortedPeople = personList.stream()
+        personList.stream()
                 .filter(person -> person.getAge() > 25)
-                .collect(Collectors.toList());
-
-        sortedPeople.sort(Comparator.comparing(Person::getName));
-
-        List<String> nameAndAge = sortedPeople.stream()
+                .sorted((p1,p2) -> p1.getName().compareTo(p2.getName()))
                 .map(person -> person.getName() + " - " + person.getAge())
-                .collect(Collectors.toList());
-
-        nameAndAge.forEach(System.out::println);
+                .forEach(System.out::println);
     }
 }
