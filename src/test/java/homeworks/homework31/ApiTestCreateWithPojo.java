@@ -4,8 +4,9 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
+import static homeworks.homework31.DateAndTimeForCreateUserPojo.isValidDateAndTime;
 import static io.restassured.RestAssured.given;
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 public class ApiTestCreateWithPojo {
 
@@ -31,5 +32,7 @@ public class ApiTestCreateWithPojo {
 
         assertEquals(userResponsePojo.getName(), "morpheus");
         assertEquals(userResponsePojo.getJob(), "leader");
+        assertNotNull(userResponsePojo.getId(), "ID should not be empty");
+        assertTrue(isValidDateAndTime(userResponsePojo.getCreatedAt()), "Invalid date format for createdAt");
     }
 }
