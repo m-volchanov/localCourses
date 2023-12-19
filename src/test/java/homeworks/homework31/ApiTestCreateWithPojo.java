@@ -29,6 +29,7 @@ public class ApiTestCreateWithPojo {
                 .response();
 
         CreateUserResponsePojo userResponsePojo = response.as(CreateUserResponsePojo.class);
+
         assertEquals(userResponsePojo.getName(), "morpheus");
         assertEquals(userResponsePojo.getJob(), "leader");
         assertNotNull(userResponsePojo.getId(), "ID should not be empty");
